@@ -1,3 +1,4 @@
+// this class contains a constructor, getter and setter
 class Car {
     int ps;
     int yearOfConstruction;
@@ -49,6 +50,7 @@ class mainCar {
         myCar.drive();
         myCar.showDetails();
 
+        // the use of the string method "equals" is shown in the method below
         if (myCar.brand.equals(myCar.name)) {
             System.out.println("Unkreativ");
         } else {
