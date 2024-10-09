@@ -1,13 +1,10 @@
 public class Zahlenraten{
 
     public static void main(String[] args) {
-        int glueckszahl = 7;
+        int glueckszahl = 2;
 
         switch (glueckszahl) {
-            case 1:
-            case 2:
-            case 3:
-            case 10:
+            case 1, 2, 3, 10:
                 System.out.println("Ganz weit weg!");
                 break;
             case 4:
@@ -22,6 +19,13 @@ public class Zahlenraten{
                 System.out.println("Daneben!");
                 break;
         }
+
+        switch (glueckszahl) {
+            case 1, 2, 3, 10 ->
+                System.out.println("Ganz weit weg!");
+        }
     }
+
 }
+
 
