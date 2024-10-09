@@ -3,7 +3,8 @@ class Car {
     int ps;
     int yearOfConstruction;
 
-    int price;
+    private int price;
+    private int colourcode;
 
     String brand;
     String name;
@@ -13,6 +14,20 @@ class Car {
         this.ps = 80;
         this.yearOfConstruction = 2006;
         this.price = 45000;
+    }
+
+    // Getter for colourcode
+    public int getColourcode() {
+        return price;
+    }
+
+    // Setter for colourcode
+    public void setColourcode(int code) {
+        if (code != 000000) {
+            this.colourcode = code;
+        } else {
+            System.out.println("Schwarze Autos werden nicht produziert.");
+        }
     }
 
     // Getter for price
@@ -46,6 +61,10 @@ class mainCar {
         myCar.yearOfConstruction = 2021;
         myCar.brand = "Mercedes";
         myCar.name = "Stella";
+
+        Car happyCar = new Car();
+        happyCar.setColourcode(123456);
+        System.out.println(happyCar.getColourcode());
 
         myCar.drive();
         myCar.showDetails();
