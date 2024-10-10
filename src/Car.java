@@ -3,6 +3,8 @@ class Car {
     int ps;
     int yearOfConstruction;
 
+    public float dirty;
+
     private int price;
     private int colourcode;
 
@@ -44,7 +46,12 @@ class Car {
         }
     }
 
+    public void wash(float time) {
+        dirty -= time;
+    }
+
     protected void drive() {
+        dirty += 0.75F;
         System.out.println("brum brumm");
     }
 
@@ -66,7 +73,11 @@ class mainCar {
         happyCar.setColourcode(123456);
         System.out.println(happyCar.getColourcode());
 
+        System.out.println(myCar.dirty);
         myCar.drive();
+        myCar.wash(0.23F);
+        System.out.println(myCar.dirty);
+
         myCar.showDetails();
 
         // the use of the string method "equals" is shown in the method below
